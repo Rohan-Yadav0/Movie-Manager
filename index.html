@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+        <title>Movie Manager</title>
+    </head>
+    <body>
+        <div>
+            <div class="header"><h1>My Movie Collection</h1></div>
+
+            <div class="addMovie"><button id="addMovieButton">Add New Movie</button></div>
+
+            <div><input type="text" id="searchBar" name="searchBar"></div>
+
+            <div>
+                <label name="filter">Filter</label>
+                <select name="filter" id="filterMovie">
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Action">Action</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+                </select> 
+            </div>
+
+            <div>
+                <label name="sort">Sort By</label>
+                <select name="sort" id="sortBy">
+                <option value="High-Low">High-Low</option>
+                <option value="Year">Year(Newest)</option>
+                </select> 
+            </div>
+            <div>
+            <span>Total Movies :<span id="totalMovieText"><strong>0</strong></span>
+            <span>Average Rating :<span id="avgRatingText"><strong>0</strong></span></span>
+            </div>
+            <div class="movieCard">
+                <div id="movieNameCard"><strong>Inception</strong></div>
+                <div>
+                    <span>Genre :<span id="genreCardText"><strong>Sci-Fi</strong></span></span>
+                    <span>Year :<span id="yearCardText"><strong>DD/MM/YYYY</strong></span></span>
+                </div>
+                <div>
+                    <span>Rating :<span id=""><strong>0.0</strong></span></span>
+                </div>
+                <div>
+                    <button name="delete" id="delete">Delete</button>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
