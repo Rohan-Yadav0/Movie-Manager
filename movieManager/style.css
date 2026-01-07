@@ -1,0 +1,227 @@
+
+body {
+    background-color: #0F172A;
+    color: #E5E7EB;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.header {
+    background-color: #020617;
+    color: #F9FAFB;
+    text-align: center;
+
+    border: 1px solid #334155;
+    border-radius: 8px;
+
+    padding: 10px;
+}
+
+.addMovie {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#addMovieButton {
+    background-color: #22C55E;
+    color: #022C22;
+
+    height: 34px;
+    width: 200px;
+
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#addMovieButton:hover {
+    background-color: #16A34A;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.3);
+}
+
+#add-movie-form {
+    background-color: #020617;
+    border: 1px solid #1E293B;
+    border-radius: 12px;
+
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#add-movie-form h3 {
+    margin: 0;
+    text-align: center;
+    color: #F1F5F9;
+}
+
+#add-movie-form input,
+#add-movie-form select {
+    background-color: #0F172A;
+    color: #E5E7EB;
+
+    border: 1px solid #334155;
+    border-radius: 6px;
+
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+#add-movie-form input::placeholder {
+    color: #64748B;
+}
+
+#add-movie-form input:focus,
+#add-movie-form select:focus {
+    outline: none;
+    border-color: #38BDF8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+#add-movie-form button {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#submit-movie {
+    background-color: #22C55E;
+    color: #022C22;
+    border: none;
+}
+
+#submit-movie:hover {
+    background-color: #16A34A;
+}
+
+#cancel-form {
+    background-color: transparent;
+    color: #F87171;
+    border: 1px solid #F87171;
+}
+
+#cancel-form:hover {
+    background-color: #450A0A;
+}
+
+.search-continer,
+.filterDropdown,
+.sortDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 0;
+}
+
+#searchBar,
+#filterMovie,
+#sortBy {
+    background-color: #020617;
+    color: #E5E7EB;
+
+    width: 300px;
+    height: 34px;
+
+    border: 1px solid #334155;
+    border-radius: 6px;
+
+    padding: 0 10px;
+    font-size: 14px;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#searchBar:hover,
+#filterMovie:hover,
+#sortBy:hover {
+    border-color: #64748B;
+}
+
+#searchBar:focus,
+#filterMovie:focus,
+#sortBy:focus {
+    outline: none;
+    border-color: #38BDF8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.stats {
+    background-color: #020617;
+    border: 1px solid #1E293B;
+    border-radius: 8px;
+
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 10px 16px;
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    font-size: 14px;
+}
+
+.stats span {
+    color: #CBD5F5;
+}
+
+#totalMovieText strong,
+#avgRatingText strong {
+    color: #FACC15;
+    font-weight: 600;
+}
+
+#movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: #1E293B;
+    border-radius: 10px;
+    padding: 20px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card h3 {
+    color: #F9FAFB;
+    margin-top: 0;
+}
+
+.movie-card p {
+    color: #E5E7EB;
+    margin: 8px 0;
+}
+
+.movie-card button {
+    background-color: #EF4444;
+    color: white;
+
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.movie-card button:hover {
+    background-color: #DC2626;
+}
