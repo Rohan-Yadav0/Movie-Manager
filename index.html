@@ -7,15 +7,42 @@
     </head>
     <body>
         <div>
-            <div class="header"><h1>My Movie Collection</h1></div>
+            <div class="header">
+                <h1>My Movie Collection</h1>
+            </div>
 
-            <div class="addMovie"><button id="addMovieButton">Add New Movie</button></div>
+            <div class="addMovie">
+                <button id="addMovieButton">Add New Movie</button>
+            </div>
 
-            <div><input type="text" id="searchBar" name="searchBar"></div>
+            <form id="add-movie-form" style="display: none;">
+            <h3>Add New Movie</h3>
+            <input type="text" id="title-input" placeholder="Movie Title" required>
+            <label for="genre-input">Genre:</label>
+            <select id="genre-input">
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Action">Action</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+            </select>
+            
+            <input type="number" id="year-input" placeholder="Year" required>
+            <input type="number" id="rating-input" placeholder="Rating (0-10)" step="0.1" min="0" max="10" required>
+            
+            <button id="submit-movie">Add Movie</button>
+            <button id="cancel-form">Cancel</button>
+            
+        </form>
 
-            <div>
-                <label name="filter">Filter</label>
-                <select name="filter" id="filterMovie">
+            <div class="search-continer">
+                <label for="searchBar">Search:</label>
+                <input type="text" id="searchBar" name="searchBar"  placeholder="Search movies by title....">
+            </div>
+
+            <div class="filterDropdown">
+                <label name="filter">Filter :</label>
+                <select name="filter" id="filterMovie" >
+                <option value="All">All</option>
                 <option value="Sci-Fi">Sci-Fi</option>
                 <option value="Action">Action</option>
                 <option value="Crime">Crime</option>
@@ -23,30 +50,21 @@
                 </select> 
             </div>
 
-            <div>
-                <label name="sort">Sort By</label>
+            <div class="sortDropdown">
+                <label name="sort">Sort By :</label>
                 <select name="sort" id="sortBy">
                 <option value="High-Low">High-Low</option>
-                <option value="Year">Year(Newest)</option>
+                <option value="year">Year(Newest)</option>
                 </select> 
             </div>
-            <div>
-            <span>Total Movies :<span id="totalMovieText"><strong>0</strong></span>
-            <span>Average Rating :<span id="avgRatingText"><strong>0</strong></span></span>
+
+            <div class="stats">
+            <span>Total Movies : <span id="totalMovieText"><strong>0</strong></span>
+            <span>  |  </span>
+            <span>Average Rating : <span id="avgRatingText"><strong>0.0</strong></span></span>
             </div>
-            <div class="movieCard">
-                <div id="movieNameCard"><strong>Inception</strong></div>
-                <div>
-                    <span>Genre :<span id="genreCardText"><strong>Sci-Fi</strong></span></span>
-                    <span>Year :<span id="yearCardText"><strong>DD/MM/YYYY</strong></span></span>
-                </div>
-                <div>
-                    <span>Rating :<span id=""><strong>0.0</strong></span></span>
-                </div>
-                <div>
-                    <button name="delete" id="delete">Delete</button>
-                </div>
-            </div>
+
+            <div id="movie-container"></div>
         </div>
         <script src="./script.js"></script>
     </body>
