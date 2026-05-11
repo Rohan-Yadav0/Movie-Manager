@@ -3,7 +3,7 @@
 A vanilla JavaScript application for managing your personal movie collection with full CRUD operations.
 
 ![Movie Manager Screenshot](screenshot.png)
-*(Optional: Add a screenshot of your app)*
+
 
 ## 🚀 Features
 
